@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    
+    <body>
+
+        <h1>What Can JavaScript Do?</h1>
+
+        <p>JavaScript can change HTML attributes.</p>
+
+        <p>In this case JavaScript changes the src (source) attribute of an image. <br>Give it a shot!  Are you happy or sad?</p>
+
+<button onclick="document.getElementById('Emotion').src='pic_happy.png'">Happy</button>
+
+<img id="Emotion" src="pic_happy.png" style="width:203px">
+
+<button onclick="document.getElementById('Emotion').src='pic_sad.png'">Sad</button>
+
+    </body>
+    
+</html>
