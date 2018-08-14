@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+
+    <body>
+            
+        <script>
+            
+            function randSaying() {
+	           var choice = Math.floor((Math.random() * 20) + 1);                         
+	                   return choice;
+                    }
+
+        </script>
+        
+        <script>
+
+            function answerQuestion(){
+	           if (document.getElementById("question").value === ""){
+		      window.alert("Please enter a question");
+	           
+            }else{
+		      document.getElementById('shaking').innerHTML = 'shaking....';
+	
+		      document.getElementById('answer').innerHTML = '--------';
+	
+		     setTimeout(function(){ 
+			 document.getElementById('shaking').innerHTML = 'The magic 8 Ball declares ..... ';
+		 
+		      }, 750);
+
+		
+		      saying = randSaying()
+
+		      setTimeout(function(){
+		      if (saying == 1){
+			     document.getElementById('answer').innerHTML = 'It is certain';
+		      }else if(saying == 2){
+			     document.getElementById('answer').innerHTML = 'It is decidedly so';
+		      }
+              if (saying == 3){
+                  document.getElementById('answer').innerHTML = 'Ask again later';
+              }else if(saying == 4){
+                  document.getElementById('answer').innerHTML = 'Outlook good';
+              }
+              if (saying == 5){
+                  document.getElementById('answer').innerHTML = 'Signs point to yes'
+              }else if(saying == 6){
+                  document.getElementById('answer').innerHTML = 'Signs point to no'
+              }
+              if (saying == 7){
+                  document.getElementById('answer').innerHTML = 'Yes definitely'
+              }else if(saying == 8){
+                  document.getElementById('answer').innerHTML = 'Reply hazy, try again'
+              }
+              if (saying == 9){
+                  document.getElementById('answer').innerHTML = 'As I see it is yes'
+              }else if(saying == 10){
+                  document.getElementById('answer').innerHTML = 'Very doubtful'
+              }
+              if (saying == 11){
+                  document.getElementById('answer').innerHTML = 'Do not count on it'
+              }else if(saying == 12){
+                  document.getElementById('answer').innerHTML = 'Concentrate and ask again'
+              }
+              if (saying == 13){
+                  document.getElementById('answer').innerHTML = 'My sources say no'
+              }else if(saying == 14){
+                  document.getElementById('answer').innerHTML = 'You may rely on it'
+              }
+              if (saying == 15){
+                  document.getElementById('answer').innerHTML = 'Cannot predict now'
+              }else if(saying == 16){
+                  document.getElementById('answer').innerHTML = 'Yes'
+              }
+              if (saying == 17){
+                  document.getElementById('answer').innerHTML = 'Without a doubt'
+              }else if(saying == 18){
+                  document.getElementById('answer').innerHTML = 'Better not tell you now'
+              }
+              if (saying == 19){
+                  document.getElementById('answer').innerHTML = 'You can count on it'
+              }else if(saying == 20){
+                  document.getElementById('answer').innerHTML = 'No'
+              }
+
+        }, 1250);// end of the setTimeout
+	   }
+      }
+
+        </script>
+        
+<br>
+        <title>Magic 8 Ball</title>
+
+        <h1 style = "text-align: center">Magic 8 Ball</h1>
+
+        <p id = "shaking" style = "text-align: center;display:block">--------</p>
+        
+        <p id = "answer" style = "text-align: center;display:block">--------</p>
+
+        <img id="8Ball" src="8Ball0.png" style="width:350px;height:350px;display:block;margin:auto">
+
+<br>
+        
+        <p style = "text-align: center">Type in a question you would like the wondrous Magic 8 Ball to answer.</p>
+        
+<br>
+        
+
+        <input onfocus = "this.value = ''" type="text" id="question" value="" size = "20" style= "display:block;margin: auto">
+<br>
+
+        <button style= "display:block;margin: auto" onclick="answerQuestion()">Shake The Eight Ball</button>
+
+    </body>
+    
+</html>
