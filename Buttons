@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+    <html>
+
+        <body>
+
+
+            <h1>Buttons</h1>
+
+            <p>Normal, hover, click.</p>
+
+            <p id="clicked" style="display:block;visibility:hidden">You clicked me!</p>
+
+            <img src="picButtonNormal.png" 
+                 onmouseover= "this.src = 'picButtonHovered.png'" 
+                 onmouseout = 'this.src = "picButtonNormal.png"'
+                 onmousedown = 'this.src = "picButtonPressed.png";document.getElementById("clicked").style.visibility = "visible"'
+                 onmouseup = 'this.src = "picButtonHovered.png";document.getElementById("clicked").style.visibility = "hidden"'
+
+        </body>
+            
+</html>
