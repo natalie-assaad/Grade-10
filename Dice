@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+
+    <script>
+        // function to calculate random number between 1 and 6
+        function randDice() {
+            var number = Math.floor(Math.random() * 6) + 1;
+            return number
+        }
+
+        // function to “roll the dice” for the computer and
+        // the user and display the correct image
+        function rollDice() {
+
+
+            //call the randDice function to get random number
+            player = randDice();
+            computer = randDice();
+
+            //if statement to dislpay image for player’s roll
+            if (player == 1) {
+                document.getElementById('dieOne').src = 'die1.png'
+            } else if (player == 2) {
+                document.getElementById('dieOne').src = 'die2.png'
+            } else if (player == 3) {
+                document.getElementById('dieOne').src = 'die3.png'
+            } else if (player == 4) {
+                document.getElementById('dieOne').src = 'die4.png'
+            } else if (player == 5) {
+                document.getElementById('dieOne').src = 'die5.png'
+            } else if (player == 6) {
+                document.getElementById('dieOne').src = 'die6.png'
+            }
+
+            //if statement to display image for computer’s roll
+            if (computer == 1) {
+                document.getElementById('dieTwo').src = 'die1.png'
+            } else if (computer == 2) {
+                document.getElementById('dieTwo').src = 'die2.png'
+            } else if (computer == 3) {
+                document.getElementById('dieTwo').src = 'die3.png'
+            } else if (computer == 4) {
+                document.getElementById('dieTwo').src = 'die4.png'
+            } else if (computer == 5) {
+                document.getElementById('dieTwo').src = 'die5.png'
+            } else if (computer == 6) {
+                document.getElementById('dieTwo').src = 'die6.png'
+            }
+
+            //call the function checkWin to determine a winner
+            // “pass” it the player’s number and computer’s number
+            checkWin(player, computer);
+        }
+
+        // function to determine who won and display the appropriate message
+        function checkWin(person, comp) {
+
+            if (person == comp) {
+                document.getElementById("winner").innerHTML = "It's a tie.";
+            } else if (person > comp) {
+                document.getElementById("winner").innerHTML = "You won!";
+            } else if (person < comp) {
+                document.getElementById("winner").innerHTML = "Better luck next time.";
+            }
+        }
+
+    </script>
+
+    <title>Dice Game</title>
+
+    <h1>Roll The Dice</h1>
+
+    <p id="winner" style="display:block"></p>
+
+    <img id="dieOne" src="die1.png" style="width:139px">
+    <img id="dieTwo" src="die1.png" style="width:139px">
+
+    <br>
+
+    <pre>       YOU             COMPUTER </pre>
+
+    <br>
+
+    <button onclick="rollDice();">Roll The Dice</button>
+
+</body>
+
+</html>
