@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+    <html>
+        <body>
+
+            <h1>My First Web Page</h1>
+            
+            <p>My First Paragraph that talks about math.</p>
+
+            <p id="demo"></p>
+
+            <script>
+                document.getElementById("demo").innerHTML = 22 + 8;
+            </script>
+
+        </body>
+        
+    </html>
